@@ -8,4 +8,4 @@ add_subdirectory(power) #添加power子目录
 
 # 制定生成目标
 add_executable(calc_more_dir ${ALL_SRCS})
-target_link_libraries(calc_more_dir power)
+target_link_libraries(calc_more_dir power) #指定链接的静态库
