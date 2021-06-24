@@ -1,0 +1,4 @@
+D:/env/study/qt/itool/build/CMakeFiles/itool.dir
+D:/env/study/qt/itool/build/CMakeFiles/edit_cache.dir
+D:/env/study/qt/itool/build/CMakeFiles/rebuild_cache.dir
+D:/env/study/qt/itool/build/CMakeFiles/itool_autogen.dir
