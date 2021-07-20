@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 #include "SerialPort.h"
 #include "libssh2.h"
+#include "curl.h"
 
 
 using namespace std;

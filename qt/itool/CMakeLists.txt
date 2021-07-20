@@ -38,6 +38,11 @@ set(LIBSSH2_LINK_DIR D:/env/libssh2/bin)
 include_directories(${LIBSSH2_INC_DIR})
 link_directories(${LIBSSH2_LINK_DIR})
 
+set(CURL_INC_DIR D:/env/curl/include/curl)
+set(CURL_LINK_DIR D:/env/curl/build/lib)
+include_directories(${CURL_INC_DIR})
+link_directories(${CURL_LINK_DIR})
+
 if(ANDROID)
   add_library(itool SHARED
     main.cpp
@@ -57,6 +62,8 @@ endif()
 target_link_libraries(itool PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(itool PRIVATE  liblibcserialport)
 target_link_libraries(itool PRIVATE  liblibssh2)
+target_link_libraries(itool PRIVATE  libcurl)
+
 
 
 
