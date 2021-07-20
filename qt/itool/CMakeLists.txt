@@ -28,10 +28,15 @@ find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
 
-set(INC_DIR D:/env/CSerialPort/include/CSerialPort)
-set(LINK_DIR D:/env/CSerialPort/bin/lib)
-include_directories(${INC_DIR})
-link_directories(${LINK_DIR})
+set(CSerialPort_INC_DIR D:/env/CSerialPort/include/CSerialPort)
+set(CSerialPort_LINK_DIR D:/env/CSerialPort/bin/lib)
+include_directories(${CSerialPort_INC_DIR})
+link_directories(${CSerialPort_LINK_DIR})
+
+set(LIBSSH2_INC_DIR D:/env/libssh2/include)
+set(LIBSSH2_LINK_DIR D:/env/libssh2/bin)
+include_directories(${LIBSSH2_INC_DIR})
+link_directories(${LIBSSH2_LINK_DIR})
 
 if(ANDROID)
   add_library(itool SHARED
@@ -51,4 +56,7 @@ endif()
 
 target_link_libraries(itool PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(itool PRIVATE  liblibcserialport)
+target_link_libraries(itool PRIVATE  liblibssh2)
+
+
 

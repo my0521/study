@@ -1,6 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 #include "SerialPort.h"
+#include "libssh2.h"
+
 
 using namespace std;
 using namespace itas109;
